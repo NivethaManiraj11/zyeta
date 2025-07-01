@@ -1,0 +1,308 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zyeta design</title>
+    <link rel="icon" href="house.png">
+    
+    <style>
+        :root {
+            --primary-color: #090a46;
+            --secondary-color: #ecf0f1;
+            --accent-color: #e2c628;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+            margin-top:20px ;
+        }
+
+        header {
+            font-family: 'Roboto', sans-serif;
+            position: sticky;
+            top: 0;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            padding-left: 20px;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .container {
+            padding: 2rem;
+        }
+
+        .home, .about, .contact {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .home .text, .about .text, .contact .form {
+            flex: 1;
+        }
+
+        .home img, .about img, .contact .details {
+            flex: 1;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .cta {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .cta:hover {
+            background-color: #1a1a55;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        .service-column {
+            display: grid;
+            gap: 1rem;
+        }
+
+        .card {
+            background-color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            gap: 1rem;
+        }
+
+        .projects, .testimonials {
+            display: flex;
+            gap: 1rem;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+        }
+
+        .projects .card, .testimonials .card {
+            flex: 0 0 auto;
+            width: 300px;
+            scroll-snap-align: start;
+        
+
+        }
+
+        .form input, .form textarea {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .dark-mode {
+            background-color: #1c1c1c;
+            color: #f0f0f0;
+        }
+
+        .dark-mode .card {
+            background-color: #333;
+            color: #fff;
+        }
+        #image
+        {
+            margin-left: 30px;
+            height: 500px;
+            width: 700px;
+            border-radius: 40px;
+            
+        }
+        #image2
+        {
+        height: 500px;
+        width: 700px;
+        border-radius:40px ;
+        }
+        #address{
+            margin-bottom: 200px;
+            margin-left: 100px;
+        }
+        
+
+        .toggle-mode {
+            background: none;
+            border: 2px solid rgb(243, 239, 239);
+            color: rgb(228, 221, 221);
+            padding: 5px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="font-size: 50px;font-family: sans-serif;font-style: italic;">Zyeta Designs</div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <nav>
+            &nbsp;&nbsp;&nbsp;<a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#features">Features</a>
+            <a href="#projects">Projects</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="toggle-mode" onclick="toggleDarkMode()">mode</button>
+    </header>
+
+    <section id="home" class="container home">
+        <div class="text">
+            <h1 style="font-size: 40px;padding-top: 20px;">Design Your Dream Home</h1>
+            
+            <p>We transform spaces into elegant and functional designs.</p>
+        
+            <button class="cta">Get Started</button> <br><br><br><br><br><br><img src="home.png" height="30px"; width="30px";>&nbsp;&nbsp;20% Extra storage &nbsp;&nbsp;| &nbsp;&nbsp;<img src="insurance.png" height="30px";width="30p";>10-Year warranty&nbsp;&nbsp;|&nbsp;&nbsp;<img src="payment.png" height="30px";width="30px" alt="">&nbsp;&nbsp;No-Cost EMI
+        </div>
+        <img id="image" src="pexels-alex-qian-1180283-2343465 (1).jpg" alt="Home Design">
+    </section>
+<hr><hr>
+    <section id="about" class="container about">
+        <img  id="image2"src="floor-to-ceiling-wooden-wardrobe-images.jpg" alt="About Us">
+        <div class="text">
+            <h2 style="font-size:40px ;">About Us</h2><br><br>
+            <p>We are passionate interior designers with over 10 years of experience, <br>We provide a wide variety of services and decorating designs. <br>Making a customer to be satisfied with our services. <br><br>Zyeta Design has designed more than 10000 homes across the country. DC’s homes have been featured in over 30 design publications across the world.  The next one could be yours. <br><br> is expanding across the country and is poised to become the most recognised and trusted brand for home interiors in India.🙂 </p>
+            <button class="cta">Learn More</button>
+        </div>
+    </section>
+    <hr><hr>
+<h1 style="font-size: 40px;text-align: center;">Services</h1>
+    <section id="services" class="container services">
+        
+        <div class="service-column">
+            <div class="card"><img src="living-room-interior-design-for-small-indian-homes-with-subtle-pastel-dual-tone.jpg" height="200px"; width="300px"; alt=""><br><br><button  style ="font-size: 15px;color: #1a1a55;background-color: #ecf0f1;font-style: oblique;font-family: sans-serif;"><strong><a href="Living.html" style="text-decoration: none;">LivingRoom</a></strong></button><br><br><p>Modern and cozy living room designs.</p></div>
+            <div class="card"><img src="modern-bedroom-design-blue-white-bed-design-image-online.jpg" height="200px"; width="300px"; alt=""><br><br><button style="font-size: 15px;color: #1a1a55;background-color: #ecf0f1;font-style: oblique;font-family: sans-serif;"><strong><a href="bedroom.html" style="text-decoration: none;">Bedroom</a></strong></button><br><br><p>Peaceful and functional bedroom spaces.</p></div>
+            <div class="card"><img src="modern-classical-bathroom-design-with-blue-wall-finish-ceramic-tiles.jpg" height="200px";width="200px" alt=""><br><br><button style="font-size: 15px;color: #1a1a55;background-color: #ecf0f1;font-style: oblique;font-family: sans-serif;"><strong><a href="dining.html" style="text-decoration: none;">Bathroom</a></strong></button><br><br><p>Elegant and relaxing bathroom interiors.</p></div>
+        </div>
+        <div class="service-column">
+            <div class="card"><img src="l-shaped-kitchen-with-dining-table-design.jpg" height="200px" width="300px"><br><br><button style="font-size: 15px;font-family: sans-serif;font-style: oblique;color: #1a1a55;background-color: #ecf0f1;"><strong><a href="kitchen.html" style="text-decoration: none;">Kitchen</a></strong></button><br><br><p>Efficient and stylish kitchen layouts.</p></div>
+            <div class="card"><img src="wfh-friendly-living-room-for-working-professionals.jpg" height="200px" width="300px"><br><br><button style="font-size: 15px;font-family: sans-serif;font-style: oblique;color: #1a1a55;background-color: #ecf0f1;" alt=""><strong><a href="office.html" style="text-decoration: none;">Workspace</a></strong></button><br><br><p>Productive and ergonomic workspaces.</p></div>
+            <div class="card"><img src="download.jpg"height="200px" width="300px" alt=""><br><br><button style="font-size: 15px;font-family: sans-serif;font-style: oblique;color: #1a1a55;background-color: #ecf0f1;"><strong><a href="storage.html" style="text-decoration: none;">Storage</a></strong></button><br><br><p>Optimized storage solutions.</p></div>
+        </div>
+        <div class="service-column">
+            <div class="card"><img src="download (1).jpg" height="200px" width="300px" alt=""><br><br><button style="font-size: 15px;font-family: sans-serif;font-style: oblique;color: #1a1a55;background-color: #ecf0f1;"><strong><a href="out.html" style="text-decoration: none;">Outdoor</a></strong></button><br><br><p>Beautiful and functional outdoor spaces.</p></div>
+            <div class="card"><img src="download (2).jpg" height="200px" width="300px" alt=""><br><br><button style="font-size: 15px;font-family: sans-serif;font-style: oblique;color: #1a1a55;background-color: #ecf0f1;"><strong><a href="home.html" style="text-decoration: none;">FullHouse</a></strong></button><br><br><p>Complete home redesigns.</p></div>
+            <div class="card"><img src="images 5.jpg" height="200px" width="300px" alt=""><br><br><button style="font-size: 15px;font-style: oblique;font-family: sans-serif;color: #1a1a55;background-color: #ecf0f1;"><strong><a href="light.html" style="text-decoration: none;">Lighting</a></strong></button><br><br><p>Creative lighting designs.</p></div>
+        </div>
+    </section>
+    <hr><hr>
+    <h1 style="font-size: 40px;text-align: center;">Features</h1><br><br>
+     <section id="features" class="container features">
+        <div class="card"><img src="240_F_1250756614_6COe1TzJtqF4NlDzeYloet0xPkI4ffzQ.jpg" height="300px" width="400px"><br><br><strong> Eco-Friendly</strong><p>We use sustainable materials for every project.</p></div>
+        <div class="card"><img src="240_F_400588407_ti3FEMnE9wx3q1yvGhP89x5X4qBUHWs0.jpg" height="300px" width="400px" alt=""><br><br><strong> Custom Designs</strong><p>Every space is tailored to client needs.</p></div>
+        <div class="card"> <img src="240_F_1264430550_5ePKSoEYi5tV0bNbByRciMgLlAWvqkhW.jpg" height="300px" width="400px" alt=""><br><br><strong>Affordable</strong><p>High quality design at reasonable cost.</p></div>
+    </section>
+<br><br><hr><hr>
+<h1 style="font-size: 40px;text-align: center;">projects</h1>
+<br><br>
+  <section id="projects" class="container projects">
+       <div class="card"><img src="modern-living-room-design-with-tv-unit-designed-with-storage.jpg" height="280px" width="250px" alt="Project"><h3>Modern Living</h3><p>A serene and modern living space.</p><button class="cta">View</button></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="card"><img src="blue-and-white-modular-kitchen-design.jpg" width="250px" height="280px" alt="Project"><h3>Bright Kitchen</h3><p>Stylish kitchen with vibrant tones.</p><button class="cta">View</button></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <div class="card"><img src="modern-bedroom-designs-in-bangalore-mumbai-hyderabad.jpg.jpg" width="250px" height="280px" alt="Project"><h3>Luxury Bedroom</h3><p>Comfort and elegance combined.</p><button class="cta">View</button></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+    <div class="card"><img src="dining-room-in-oak-wood-fininsh-dining-table-for-six-with-gorgeous-painting.jpg" width="250px" height="280px" alt="Project"><h3>traditional dinning</h3><p>traditional and culture dinning </p><button class="cta">View</button></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&p;&nbsp;&nbsp;
+    <div class="card"><img src="240_F_1023953096_EgKoAGKNIXhMpLHOSmq5n3HM8MvGPSmc.jpg" width="250px" height="280px" alt="Project"><h3>custom home</h3><p>elegant phase of home</p><button class="cta">View</button></div>
+    <div class="card"><img src="kids-wardrobe-design-for-bedroom.jpg" width="250px" height="280px" alt="Project"><h3>Kids wardrope</h3><p>colourful and joyful place</p><button class="cta">View</button></div>
+</section>
+<br><br><hr><hr>
+<h1 style="font-size: 40px;text-align: center;">Testimonials</h1>
+<br><br><br>
+
+    <section id="testimonials" class="container testimonials">
+        <div class="card"><img src="gettyimages-2198851165-612x612.jpg" height="200" width="250" style="border-radius: 1000px;" alt="person"><h3>Jane Doe</h3><p>"Amazing transformation of our space!"</p></div>
+        <div class="card"><img src="gettyimages-1867987316-612x612.jpg" height="200" width="250"  style="border-radius: 1000px;" alt="Person"><h3>John Smith</h3><p>"Professional and creative team."</p></div>
+        <div class="card"><img src="gettyimages-1480659568-612x612.jpg" height="200" width="250" style="border-radius: 1000px;" alt="Person"><h3>Emily R.</h3><p>"Loved the final results!"</p></div>
+        <div class="card"><img src="gettyimages-2204288502-612x612.jpg" height="200" width="250" style="border-radius: 1000px;" alt="Person"><img src="g" alt=""> <h3>smithasha</h3><p>"Highly recommended!"</p></div>
+     <div class="card"><img src="gettyimages-473247666-612x612.jpg" height="200" width="250" style="border-radius: 1000px;" alt="Person"><h3>David</h3><p>"Amazing transformation of our space!"</p></div>
+    </section>
+    <br><br><br><hr><hr>
+    <section id="contact" class="container contact">
+        <div style="margin-bottom:380px;"class="form">
+            <h2 style="font-size: 40px;">Contact Us</h2><br>
+            <input type="text"  style="width: 270px; height: 40px;border-radius: 50px;" placeholder="Name">
+            <input type="email" style="width: 270px; height: 40px;border-radius: 50px;" placeholder="Email">
+            <input type="text" style="width: 270px; height: 40px;border-radius: 50px;" placeholder="Mobile Number">
+            <textarea  style="width: 270px; height: 40px;border-radius: 50px;"placeholder="Message"></textarea>
+            <button class="cta" onclick="alert('submitted')">Submit</button>
+        </div>
+        <div  style="margin-left: 70px; margin-bottom: 120px;" class="details">
+             <h2 style="font-size: 40px;">Address</h2><br>
+            <h3>Zyeta Designs</h3><br>
+            <p>123 Main Street, chennai, India</p><br>
+            <p>Phone: +1234567890</p><br>
+            <p>Website: www.zyetadesign.com</p><br>
+            <p>Follow us: <img src="instagram (1).png" height="20px" width="20px" alt="">&nbsp;Instagram &nbsp;&nbsp;|&nbsp;&nbsp;<img src="facebook.png" height="20px" width="20px"alt="">&nbsp;Facebook &nbsp;&nbsp;|&nbsp;&nbsp; <img src="twitter.png" height="20px" width="20px" alt="">&nbsp;Twitter </p><br>
+        <p>location:</p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15552.402982394795!2d77.58735446520447!3d12.965404798429045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15d4888d6307%3A0x25f1bca2900a72f0!2sZyeta!5e0!3m2!1sen!2sin!4v1750738399818!5m2!1sen!2sin" width="300" height="300" style="border:0;border-color: #1c1c1c;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    </section>
+
+    <script>
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        // Auto scroll testimonials
+        let testimonialIndex = 0;
+        const testimonials = document.querySelector('#testimonials');
+        setInterval(() => {
+            testimonialIndex++;
+            if (testimonialIndex >= testimonials.children.length) testimonialIndex = 0;
+            testimonials.scrollTo({ left: testimonials.children[testimonialIndex].offsetLeft, behavior: 'smooth' });
+        }, 3000);
+    </script>
+</body>
+</html>
+
+
+
+    
+
+   
+
+  
